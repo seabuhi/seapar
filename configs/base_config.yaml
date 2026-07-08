@@ -1,0 +1,31 @@
+# Multilingual Feedback Classifier Configuration
+
+seed: 42
+
+data:
+  train_path: "c:/Users/Vivobook/aparai/train.csv"
+  test_path: "c:/Users/Vivobook/aparai/test.csv"
+  sample_path: "c:/Users/Vivobook/aparai/sample.csv"
+  submission_path: "c:/Users/Vivobook/aparai/submission.csv"
+
+model:
+  model_name: "xlm-roberta-base"
+  num_classes: 3
+  max_length: 64
+
+training:
+  epochs: 5
+  batch_size: 16
+  lr: 2.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  grad_accum_steps: 2
+  max_grad_norm: 1.0
+  label_smoothing: 0.1
+  early_stopping_patience: 3
+  use_amp: true
+  save_dir: "c:/Users/Vivobook/aparai/outputs"
+
+validation:
+  num_folds: 5
+  stratified: true

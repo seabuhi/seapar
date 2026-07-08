@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local training checkpoints and logs (extremely large, must not go to GitHub)
+outputs/best_model_fold_*.pt
+outputs/oof_predictions.csv
+outputs/*_history.json
+outputs/run_results.json
+
+# IDE config files
+.vscode/
+.idea/
+.gemini/
+.agents/
